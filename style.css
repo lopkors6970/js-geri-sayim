@@ -1,0 +1,37 @@
+#div1{
+    width: 40%;
+    height: auto;
+    position: relative;
+    left: 450px;
+    top: 150px;
+}
+#saat{
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    float: left;
+    margin-left: 4px;
+    font-size: 128px;
+    text-align: center;
+}
+#dakika{
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    float: left;
+    margin-left: 4px;
+    font-size: 128px;
+    text-align: center;
+}
+#saniye{
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    float: left;
+    margin-left: 4px;
+    font-size: 128px;
+    text-align: center;
+}
+body{
+    background-color: green;
+}

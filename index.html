@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c20485228a.js"></script>
+</head>
+<body>
+    <div id="div1">
+        <div id="saat" class="deneme">
+
+        </div>
+        <div id="dakika" class="deneme">
+
+        </div>
+        <div id="saniye" class="deneme">
+
+        </div>
+    </div>
+
+    <script>
+        var saat = prompt("Saat",0);
+        var dakika = prompt("Dakika",0);
+        var saniye = prompt("Saniye",0);
+
+        var a =setInterval(function (){
+            document.getElementById("saat").innerHTML = saat;
+            document.getElementById("dakika").innerHTML = dakika;
+            document.getElementById("saniye").innerHTML = saniye--;
+            
+            if(Number(document.getElementById("saniye").innerHTML)==0){
+                dakika--;
+                saniye = 59;
+            }
+            if(Number(document.getElementById("dakika").innerHTML)==0 &&
+                Number(document.getElementById("saniye").innerHTML)==0 ){
+                saat--;
+                dakika = 59;
+            }
+            if(Number(document.getElementById("saat").innerHTML)==0 &&
+                Number(document.getElementById("dakika").innerHTML)==0 &&
+                Number(document.getElementById("saniye").innerHTML)==0){
+                for(i=0;i<3;i++){
+                    document.getElementsByClassName("deneme")[i].style.backgroundColor = "red";
+                    document.getElementsByClassName("deneme")[i].style.color = "white";
+                }
+                clearInterval(a);
+            }
+        },1000);
+
+    </script>
+
+</body>
+</html>
